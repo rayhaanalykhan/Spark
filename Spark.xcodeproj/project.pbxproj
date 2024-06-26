@@ -29,6 +29,7 @@
 		BCA0BE5D2C2C086F0051F76F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA0BE5C2C2C086F0051F76F /* UIColor+Extension.swift */; };
 		BCA0BE5F2C2C09B20051F76F /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA0BE5E2C2C09B20051F76F /* UIImage+Extension.swift */; };
 		BCA0BE622C2C1FEB0051F76F /* AppTextSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA0BE612C2C1FEB0051F76F /* AppTextSwitch.swift */; };
+		BCA0BE682C2C3C560051F76F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA0BE672C2C3C560051F76F /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		BCA0BE5C2C2C086F0051F76F /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		BCA0BE5E2C2C09B20051F76F /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		BCA0BE612C2C1FEB0051F76F /* AppTextSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextSwitch.swift; sourceTree = "<group>"; };
+		BCA0BE672C2C3C560051F76F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 				BCA0BE512C2C01750051F76F /* UIFont+Extension.swift */,
 				BCA0BE5C2C2C086F0051F76F /* UIColor+Extension.swift */,
 				BCA0BE5E2C2C09B20051F76F /* UIImage+Extension.swift */,
+				BCA0BE672C2C3C560051F76F /* UIView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -289,6 +292,7 @@
 				BC9AD1392C2B0E4A00C4B206 /* RosterVC.swift in Sources */,
 				BCA0BE5F2C2C09B20051F76F /* UIImage+Extension.swift in Sources */,
 				BC9AD1352C2B0E4A00C4B206 /* AppDelegate.swift in Sources */,
+				BCA0BE682C2C3C560051F76F /* UIView+Extension.swift in Sources */,
 				BC9AD1372C2B0E4A00C4B206 /* SceneDelegate.swift in Sources */,
 				BCA0BE552C2C042B0051F76F /* BaseVC.swift in Sources */,
 				BC9AD1502C2B133D00C4B206 /* BaseDM.swift in Sources */,
@@ -455,6 +459,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = AppFlow;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -487,6 +493,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = AppFlow;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
