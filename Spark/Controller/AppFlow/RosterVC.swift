@@ -11,6 +11,10 @@ class RosterVC: BaseVC {
     
     @IBOutlet weak var tableView: UITableView!
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -20,7 +24,7 @@ class RosterVC: BaseVC {
     func initUI() {
 
         // tableView nib registration
-        self.tableView.register(UINib(nibName: "", bundle: nil), forHeaderFooterViewReuseIdentifier: "")
+//        self.tableView.register(UINib(nibName: "", bundle: nil), forHeaderFooterViewReuseIdentifier: "")
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
