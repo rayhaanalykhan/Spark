@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC96EF782C2D60490096A6EE /* RosterHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC96EF772C2D60490096A6EE /* RosterHeaderView.xib */; };
+		BC96EF7A2C2D60670096A6EE /* RosterHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC96EF792C2D60670096A6EE /* RosterHeaderView.swift */; };
 		BC9AD1352C2B0E4A00C4B206 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9AD1342C2B0E4A00C4B206 /* AppDelegate.swift */; };
 		BC9AD1372C2B0E4A00C4B206 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9AD1362C2B0E4A00C4B206 /* SceneDelegate.swift */; };
 		BC9AD1392C2B0E4A00C4B206 /* RosterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9AD1382C2B0E4A00C4B206 /* RosterVC.swift */; };
@@ -33,6 +35,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC96EF772C2D60490096A6EE /* RosterHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RosterHeaderView.xib; sourceTree = "<group>"; };
+		BC96EF792C2D60670096A6EE /* RosterHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterHeaderView.swift; sourceTree = "<group>"; };
 		BC9AD1312C2B0E4A00C4B206 /* Spark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC9AD1342C2B0E4A00C4B206 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BC9AD1362C2B0E4A00C4B206 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +75,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC96EF762C2D602E0096A6EE /* TableViewHeaderFooter */ = {
+			isa = PBXGroup;
+			children = (
+				BC96EF772C2D60490096A6EE /* RosterHeaderView.xib */,
+				BC96EF792C2D60670096A6EE /* RosterHeaderView.swift */,
+			);
+			path = TableViewHeaderFooter;
+			sourceTree = "<group>";
+		};
 		BC9AD1282C2B0E4A00C4B206 = {
 			isa = PBXGroup;
 			children = (
@@ -118,7 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				BC9AD14B2C2B118900C4B206 /* Storyboard */,
-				BCA0BE5A2C2C07450051F76F /* TableViewHeaderFooter */,
+				BC96EF762C2D602E0096A6EE /* TableViewHeaderFooter */,
 				BCA0BE5B2C2C07510051F76F /* CollectionViewCell */,
 				BCA0BE602C2C10490051F76F /* CustomView */,
 			);
@@ -182,13 +195,6 @@
 				BC9AD1382C2B0E4A00C4B206 /* RosterVC.swift */,
 			);
 			path = AppFlow;
-			sourceTree = "<group>";
-		};
-		BCA0BE5A2C2C07450051F76F /* TableViewHeaderFooter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = TableViewHeaderFooter;
 			sourceTree = "<group>";
 		};
 		BCA0BE5B2C2C07510051F76F /* CollectionViewCell */ = {
@@ -274,6 +280,7 @@
 				BCA0BE4A2C2C00000051F76F /* Inter-Medium.ttf in Resources */,
 				BCA0BE4F2C2C00000051F76F /* Inter-Thin.ttf in Resources */,
 				BCA0BE492C2C00000051F76F /* Inter-Light.ttf in Resources */,
+				BC96EF782C2D60490096A6EE /* RosterHeaderView.xib in Resources */,
 				BC9AD13C2C2B0E4A00C4B206 /* Base in Resources */,
 				BCA0BE4B2C2C00000051F76F /* Inter-Black.ttf in Resources */,
 			);
@@ -286,6 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC96EF7A2C2D60670096A6EE /* RosterHeaderView.swift in Sources */,
 				BCA0BE522C2C01750051F76F /* UIFont+Extension.swift in Sources */,
 				BC9AD14E2C2B12C800C4B206 /* RosterDM.swift in Sources */,
 				BCA0BE622C2C1FEB0051F76F /* AppTextSwitch.swift in Sources */,
@@ -461,8 +469,8 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = AppFlow;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -495,8 +503,8 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = AppFlow;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

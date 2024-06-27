@@ -13,6 +13,5 @@ struct BaseDM<ResponseData: Codable> : Codable {
     let result: ResponseData?
     let hasErrors: Bool?
     let error: String?
-     
-    let timestamp: String? // this key should return inside the 'result' object
+    let timestamp: String?
 }

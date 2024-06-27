@@ -16,8 +16,10 @@ extension UIColor {
     
     enum CustomColor: String {
         case contactListBG = "ContactListBG"
-        case searchBGDisabled = "SearchBGDisabled"
-        case searchBGEnabled = "SearchBGEnabled"
+        case instructorBGDisabled = "InstructorBGDisabled"
+        case instructorBGEnabled = "InstructorBGEnabled"
+        case textFieldborder = "TFBorder"
+        case text = "Text"
     }
 }
 

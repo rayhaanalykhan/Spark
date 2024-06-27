@@ -94,10 +94,11 @@ class AppTextSwitch: UIControl {
         self.addSubview(toggleView)
         
         // State label
-        stateLabel = UILabel(frame: CGRect(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height))
-        stateLabel.textAlignment = .center
+        stateLabel = UILabel(frame: CGRect(x: toggleWidth + 5, y: 0, width: self.bounds.width - toggleWidth - 5, height: self.bounds.height))
+        stateLabel.textAlignment = .left
         stateLabel.textColor = offFGColor
         stateLabel.text = offText
+        stateLabel.font = UIFont(inter: .medium, size: 13)
         self.addSubview(stateLabel)
         
         // Tap Gesture
