@@ -49,6 +49,10 @@
                 <constraint firstAttribute="trailing" secondItem="3GF-62-3GZ" secondAttribute="trailing" constant="10" id="u1j-io-XXr"/>
             </constraints>
             <size key="customSize" width="286" height="231"/>
+            <connections>
+                <outlet property="imageIV" destination="GbF-PD-l3q" id="IkA-HV-d2e"/>
+                <outlet property="nameLBL" destination="3GF-62-3GZ" id="Heh-et-pGM"/>
+            </connections>
             <point key="canvasLocation" x="225.95419847328245" y="52.464788732394368"/>
         </collectionViewCell>
     </objects>

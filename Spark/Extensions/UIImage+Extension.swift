@@ -22,5 +22,6 @@ extension UIImage {
         case gear = "Gear"
         case magnifierGlass = "MagnifierGlass"
         case splash = "Splash"
+        case placeholder = "Placeholder"
     }
 }

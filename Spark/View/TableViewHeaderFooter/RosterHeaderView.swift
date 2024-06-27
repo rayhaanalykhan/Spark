@@ -11,6 +11,8 @@ class RosterHeaderView: UITableViewHeaderFooterView {
     
     @IBOutlet weak var baseView: UIView!
     @IBOutlet weak var rosterInfoView: UIView!
+    @IBOutlet weak var nameLBL: UILabel!
+    @IBOutlet weak var timeLBL: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
     
@@ -19,7 +21,7 @@ class RosterHeaderView: UITableViewHeaderFooterView {
         self.backgroundView = UIView()
     }
     
-    func configureHeader() {
+    func configureHeader(object: RosterDM?) {
         
         baseView.layer.cornerRadius = 8
         baseView.layer.masksToBounds = false
@@ -28,6 +30,9 @@ class RosterHeaderView: UITableViewHeaderFooterView {
         baseView.layer.shadowOffset = CGSize(width: 0, height: 2) // not using exact figma design offset for shadow
         
         rosterInfoView.roundCorners(corners: [.topLeft, .topRight], radius: 8)
+        
+        nameLBL.text = object?.classRosterName
+        timeLBL.text = "\(Utils.shared.convertToAMPMTimeFormat(dateString: object?.classStartTime)) - \(Utils.shared.convertToAMPMTimeFormat(dateString: object?.classEndTime))"
         
         collectionView.register(UINib(nibName: "ContactsCell", bundle: nil), forCellWithReuseIdentifier: "ContactsCell")
         

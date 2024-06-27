@@ -7,6 +7,11 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -93,7 +98,9 @@
                 <outlet property="baseView" destination="1fA-E3-s67" id="x2q-Bg-m4W"/>
                 <outlet property="collectionView" destination="8UT-ON-BJL" id="yEA-gf-ET7"/>
                 <outlet property="collectionViewHeight" destination="0Qz-Za-w33" id="8sD-wb-vjX"/>
+                <outlet property="nameLBL" destination="el9-zB-Wvr" id="Awg-6G-mhJ"/>
                 <outlet property="rosterInfoView" destination="gLo-7j-aPY" id="6EO-Y5-FPK"/>
+                <outlet property="timeLBL" destination="AHL-zg-t3e" id="icu-8W-9mD"/>
             </connections>
             <point key="canvasLocation" x="352.67175572519085" y="144.01408450704227"/>
         </view>

@@ -9,9 +9,9 @@ import Foundation
 
 struct BaseDM<ResponseData: Codable> : Codable {
     
-    let message: String?
-    let result: ResponseData?
-    let hasErrors: Bool?
-    let error: String?
-    let timestamp: String?
+    var message: String?
+    var result: ResponseData?
+    var hasErrors: Bool?
+    var error: String?
+    var timestamp: String?
 }

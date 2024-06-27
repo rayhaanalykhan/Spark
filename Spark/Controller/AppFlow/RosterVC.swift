@@ -20,10 +20,13 @@ class RosterVC: BaseVC {
         return true
     }
     
+    let viewModel = RosterVM()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initUI()
+        initVariable()
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: any UIViewControllerTransitionCoordinator) {
@@ -33,6 +36,7 @@ class RosterVC: BaseVC {
         tableView.reloadData()
     }
 
+    // MARK: UI Stuff
     func initUI() {
         
         instructorSwitch.addTarget(self, action: #selector(switchValueChanged(_:)), for: .valueChanged)
@@ -46,6 +50,22 @@ class RosterVC: BaseVC {
         
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    // MARK: Data Stuff
+    func initVariable() {
+        
+        viewModel.requestRosterWithContactList { isSuccess in
+            
+            guard isSuccess else {
+                
+                // Show error
+                
+                return
+            }
+            
+            self.tableView.reloadData()
+        }
     }
     
     @objc func switchValueChanged(_ sender: AppTextSwitch) {
@@ -68,7 +88,7 @@ class RosterVC: BaseVC {
 extension RosterVC: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return viewModel.rosterWithContactList?.result?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -82,8 +102,8 @@ extension RosterVC: UITableViewDataSource, UITableViewDelegate {
         headerView.collectionView.dataSource = self
         headerView.collectionView.delegate = self
         
-        headerView.configureHeader()
-        
+        headerView.configureHeader(object: viewModel.rosterWithContactList?.result?[section])
+
         return headerView
     }
     
@@ -100,7 +120,7 @@ extension RosterVC: UITableViewDataSource, UITableViewDelegate {
 extension RosterVC: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return viewModel.rosterWithContactList?.result?[section].registeredContacts?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -108,6 +128,8 @@ extension RosterVC: UICollectionViewDataSource, UICollectionViewDelegate {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ContactsCell", for: indexPath) as? ContactsCell else {
             return UICollectionViewCell()
         }
+        
+        cell.configureCell(object: viewModel.rosterWithContactList?.result?[indexPath.section].registeredContacts?[indexPath.row])
         
         return cell
     }
