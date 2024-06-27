@@ -51,6 +51,8 @@ class RosterVC: BaseVC {
         tableView.delegate = self
         tableView.dataSource = self
         
+        tableView.reloadData()
+        
         setupPullToRefresh(scrollableView: tableView)
         
         hideKeyboardWhenTappedAround()
@@ -133,7 +135,11 @@ extension RosterVC: UITableViewDataSource, UITableViewDelegate {
         headerView.collectionView.delegate = self
         
         headerView.configureHeader(object: viewModel.rosterWithContactList?.result?[section])
-
+        
+        headerView.collectionView.reloadData()
+        
+        headerView.updateCollectionViewHeight()
+        
         return headerView
     }
     
@@ -150,7 +156,7 @@ extension RosterVC: UITableViewDataSource, UITableViewDelegate {
 extension RosterVC: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return viewModel.rosterWithContactList?.result?[section].registeredContacts?.count ?? 0
+        return viewModel.rosterWithContactList?.result?[collectionView.tag].registeredContacts?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -159,7 +165,7 @@ extension RosterVC: UICollectionViewDataSource, UICollectionViewDelegate {
             return UICollectionViewCell()
         }
         
-        cell.configureCell(object: viewModel.rosterWithContactList?.result?[indexPath.section].registeredContacts?[indexPath.row])
+        cell.configureCell(object: viewModel.rosterWithContactList?.result?[collectionView.tag].registeredContacts?[indexPath.row])
         
         return cell
     }

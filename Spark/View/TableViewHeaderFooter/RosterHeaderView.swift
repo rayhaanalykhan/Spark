@@ -18,7 +18,7 @@ class RosterHeaderView: UITableViewHeaderFooterView {
     
     override func draw(_ rect: CGRect) {
         super.draw(rect)
-        self.backgroundView = UIView()
+        self.backgroundView = UIView()  
     }
     
     func configureHeader(object: RosterDM?) {
@@ -37,7 +37,13 @@ class RosterHeaderView: UITableViewHeaderFooterView {
         collectionView.register(UINib(nibName: "ContactsCell", bundle: nil), forCellWithReuseIdentifier: "ContactsCell")
         
         collectionViewHeight.constant = collectionView.collectionViewLayout.collectionViewContentSize.height
-        
-        collectionView.reloadData()
+    }
+    
+    func updateCollectionViewHeight() {
+        DispatchQueue.main.async {
+            self.collectionView.layoutIfNeeded()
+            self.collectionViewHeight.constant = self.collectionView.collectionViewLayout.collectionViewContentSize.height
+            self.collectionView.layoutIfNeeded()
+        }
     }
 }
