@@ -11,24 +11,24 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="RosterHeaderView" customModule="Spark" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="742" height="715"/>
+            <rect key="frame" x="0.0" y="0.0" width="742" height="201"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fA-E3-s67">
-                    <rect key="frame" x="20" y="15" width="702" height="700"/>
+                    <rect key="frame" x="20" y="15" width="702" height="186"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gLo-7j-aPY">
-                            <rect key="frame" x="0.0" y="0.0" width="702" height="30"/>
+                            <rect key="frame" x="0.0" y="0.0" width="702" height="56"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Traditional Karate hu hu ahhahahaa" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="el9-zB-Wvr">
-                                    <rect key="frame" x="10" y="5" width="265.33333333333331" height="20"/>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="17"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Traditional Karate" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="el9-zB-Wvr">
+                                    <rect key="frame" x="9.9999999999999929" y="5" width="113.33333333333331" height="46"/>
+                                    <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="13"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="5:30PM - 6:30PM" textAlignment="natural" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHL-zg-t3e">
-                                    <rect key="frame" x="558" y="5" width="134" height="20"/>
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="5:30PM - 6:30PM" lineBreakMode="characterWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHL-zg-t3e">
+                                    <rect key="frame" x="583" y="20" width="109" height="16"/>
+                                    <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="13"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -43,22 +43,45 @@
                                 <constraint firstItem="AHL-zg-t3e" firstAttribute="centerY" secondItem="el9-zB-Wvr" secondAttribute="centerY" id="nDz-x3-59p"/>
                             </constraints>
                         </view>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="251" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="8UT-ON-BJL">
+                            <rect key="frame" x="0.0" y="56" width="702" height="130"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="130" id="0Qz-Za-w33"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="rYj-h4-ldg">
+                                <size key="itemSize" width="128" height="128"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                    <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </collectionView>
                     </subviews>
                     <color key="backgroundColor" name="ContactListBG"/>
                     <constraints>
+                        <constraint firstItem="8UT-ON-BJL" firstAttribute="top" secondItem="gLo-7j-aPY" secondAttribute="bottom" id="L9a-Xp-R9h"/>
                         <constraint firstAttribute="trailing" secondItem="gLo-7j-aPY" secondAttribute="trailing" id="Uv0-Ze-vOf"/>
+                        <constraint firstAttribute="trailing" secondItem="8UT-ON-BJL" secondAttribute="trailing" id="Y6n-5o-WnC"/>
                         <constraint firstItem="gLo-7j-aPY" firstAttribute="top" secondItem="1fA-E3-s67" secondAttribute="top" id="eGN-Hp-GMp"/>
                         <constraint firstItem="gLo-7j-aPY" firstAttribute="leading" secondItem="1fA-E3-s67" secondAttribute="leading" id="fKP-Um-1oY"/>
-                        <constraint firstAttribute="height" constant="700" id="pif-Qc-B0E"/>
+                        <constraint firstItem="8UT-ON-BJL" firstAttribute="leading" secondItem="1fA-E3-s67" secondAttribute="leading" id="nMW-D5-Egq"/>
+                        <constraint firstAttribute="bottom" secondItem="8UT-ON-BJL" secondAttribute="bottom" id="vMN-zh-LA6"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                            <real key="value" value="8"/>
+                            <real key="value" value="0.0"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="1fA-E3-s67" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="Nek-EV-F7w"/>
                 <constraint firstItem="1fA-E3-s67" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="15" id="dVs-pE-8dW"/>
@@ -66,7 +89,13 @@
                 <constraint firstAttribute="trailing" secondItem="1fA-E3-s67" secondAttribute="trailing" constant="20" id="r2q-ly-hdJ"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="352.67175572519085" y="325"/>
+            <connections>
+                <outlet property="baseView" destination="1fA-E3-s67" id="x2q-Bg-m4W"/>
+                <outlet property="collectionView" destination="8UT-ON-BJL" id="yEA-gf-ET7"/>
+                <outlet property="collectionViewHeight" destination="0Qz-Za-w33" id="8sD-wb-vjX"/>
+                <outlet property="rosterInfoView" destination="gLo-7j-aPY" id="6EO-Y5-FPK"/>
+            </connections>
+            <point key="canvasLocation" x="352.67175572519085" y="144.01408450704227"/>
         </view>
     </objects>
     <resources>

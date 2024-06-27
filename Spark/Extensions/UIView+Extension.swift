@@ -30,8 +30,6 @@ extension UIView {
         }
     }
     
-    
-    
     @IBInspectable
     var borderColor: UIColor? {
         get {
@@ -94,5 +92,23 @@ extension UIView {
                 layer.shadowColor = nil
             }
         }
+    }
+    
+    enum RoundCornersAt{
+        case topRight
+        case topLeft
+        case bottomRight
+        case bottomLeft
+    }
+    
+    // Multiple corners using CACornerMask
+    func roundCorners(corners:[RoundCornersAt], radius: CGFloat) {
+        self.layer.cornerRadius = radius
+        self.layer.maskedCorners = [
+            corners.contains(.topRight) ? .layerMaxXMinYCorner:.init(),
+            corners.contains(.topLeft) ? .layerMinXMinYCorner:.init(),
+            corners.contains(.bottomRight) ? .layerMaxXMaxYCorner:.init(),
+            corners.contains(.bottomLeft) ? .layerMinXMaxYCorner:.init(),
+        ]
     }
 }
