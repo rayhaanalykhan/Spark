@@ -50,22 +50,45 @@ class RosterVC: BaseVC {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        setupPullToRefresh(scrollableView: tableView)
+        
+        hideKeyboardWhenTappedAround()
     }
     
-    // MARK: Data Stuff
+    // MARK: Data Stuff/API calls
     func initVariable() {
+        requestRosterWithContactList()
+    }
+    
+    func requestRosterWithContactList() {
+        
+        showActivityIndicator()
         
         viewModel.requestRosterWithContactList { isSuccess in
+            
+            self.hideActivityIndicator()
             
             guard isSuccess else {
                 
                 // Show error
+                self.showMessage(title: "Error", message: self.viewModel.rosterWithContactList?.message ?? "Some error occurred")
                 
                 return
             }
             
             self.tableView.reloadData()
         }
+    }
+    
+    @IBAction func dropDownBTNTapped(_ sender: UIButton) {
+        print("Drop down button tapped")
+        // show drop down
+    }
+    
+    @IBAction func settingsBTNTapped(_ sender: UIButton) {
+        print("Settings button tapped")
+        // open and modal to show settings
     }
     
     @objc func switchValueChanged(_ sender: AppTextSwitch) {
@@ -82,6 +105,13 @@ class RosterVC: BaseVC {
             searchBGView.borderColor = UIColor(color: .textFieldborder)
             instructorLBL.textColor = UIColor(color: .text)
         }
+    }
+    
+    override func pullToRefreshActionPerformed(_ sender: UIRefreshControl) {
+        
+        super.pullToRefreshActionPerformed(sender)
+        
+        requestRosterWithContactList()
     }
 }
 

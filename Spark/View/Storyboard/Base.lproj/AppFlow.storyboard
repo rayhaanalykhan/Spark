@@ -47,6 +47,9 @@
                                                 </constraints>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                 <state key="normal" image="Gear"/>
+                                                <connections>
+                                                    <action selector="settingsBTNTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ent-cM-EnN"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -84,6 +87,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="137" height="50"/>
                                                 <fontDescription key="fontDescription" name="Charter-Italic" family="Charter" pointSize="15"/>
                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <connections>
+                                                    <action selector="dropDownBTNTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Bb-61-nTm"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" name="AccentColor"/>
@@ -121,7 +127,7 @@
                                                 <rect key="frame" x="42.5" y="10" width="529.5" height="30"/>
                                                 <color key="textColor" red="0.34509803921568627" green="0.3411764705882353" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
