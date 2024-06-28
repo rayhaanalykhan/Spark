@@ -36,14 +36,8 @@ class RosterHeaderView: UITableViewHeaderFooterView {
         
         collectionView.register(UINib(nibName: "ContactsCell", bundle: nil), forCellWithReuseIdentifier: "ContactsCell")
         
+        collectionView.reloadData()
+        
         collectionViewHeight.constant = collectionView.collectionViewLayout.collectionViewContentSize.height
-    }
-    
-    func updateCollectionViewHeight() {
-        DispatchQueue.main.async {
-            self.collectionView.layoutIfNeeded()
-            self.collectionViewHeight.constant = self.collectionView.collectionViewLayout.collectionViewContentSize.height
-            self.collectionView.layoutIfNeeded()
-        }
     }
 }

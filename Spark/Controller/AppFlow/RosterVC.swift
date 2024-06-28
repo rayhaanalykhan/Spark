@@ -138,8 +138,6 @@ extension RosterVC: UITableViewDataSource, UITableViewDelegate {
         
         headerView.collectionView.reloadData()
         
-        headerView.updateCollectionViewHeight()
-        
         return headerView
     }
     
